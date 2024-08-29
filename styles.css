@@ -10,6 +10,25 @@ body {
 
 .body {
   height: 80vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.body .avatar {
+}
+
+.body .content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.body .content .first-line {
+  font-size: 1.5rem;
+}
+
+.body .content .second-line {
 }
 
 .footer {
