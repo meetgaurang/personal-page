@@ -1,0 +1,19 @@
+{
+  "name": "personal-page",
+  "version": "1.0.0",
+  "description": "Gaurang Patel Personal Page",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meetgaurang/personal-page.git"
+  },
+  "author": "Gaurang Patel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/meetgaurang/personal-page/issues"
+  },
+  "homepage": "https://github.com/meetgaurang/personal-page#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.10"
+  }
+}
