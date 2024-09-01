@@ -578,6 +578,10 @@ video {
   width: 16rem;
 }
 
+.w-52 {
+  width: 13rem;
+}
+
 .flex-row {
   flex-direction: row;
 }
@@ -608,6 +612,14 @@ video {
 
 .gap-4 {
   gap: 1rem;
+}
+
+.gap-1 {
+  gap: 0.25rem;
+}
+
+.gap-2 {
+  gap: 0.5rem;
 }
 
 .rounded-full {
@@ -722,6 +734,10 @@ video {
     display: flex;
   }
 
+  .md\:w-64 {
+    width: 16rem;
+  }
+
   .md\:flex-row {
     flex-direction: row;
   }
@@ -740,5 +756,25 @@ video {
 
   .md\:justify-start {
     justify-content: flex-start;
+  }
+
+  .md\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .md\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .md\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 }
