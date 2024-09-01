@@ -15,5 +15,8 @@
   "homepage": "https://github.com/meetgaurang/personal-page#readme",
   "devDependencies": {
     "tailwindcss": "^3.4.10"
+  },
+  "scripts": {
+    "compile-css": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
   }
 }

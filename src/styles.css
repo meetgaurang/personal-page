@@ -1,6 +1,6 @@
 .fa-github:hover,
 .fa-linkedin:hover,
 .fa-envelope:hover {
-  color: #daa520;
+  color: white !important;
   transition: 500ms;
 }
