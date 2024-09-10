@@ -16,4 +16,4 @@ jobs:
           aws-region: us-west-2
       - name: Sync files to S3 bucket
         run: |
-          aws s3 cp src s3://gaurangpatel.dev --recursive
+          aws s3 cp src s3://gaurangpatel.dev/ --recursive
