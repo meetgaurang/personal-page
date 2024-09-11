@@ -579,8 +579,8 @@ video {
   height: 8vh;
 }
 
-.w-52 {
-  width: 13rem;
+.w-44 {
+  width: 11rem;
 }
 
 .flex-col {
@@ -595,10 +595,6 @@ video {
   justify-content: center;
 }
 
-.gap-10 {
-  gap: 2.5rem;
-}
-
 .gap-2 {
   gap: 0.5rem;
 }
@@ -609,6 +605,10 @@ video {
 
 .gap-4 {
   gap: 1rem;
+}
+
+.gap-6 {
+  gap: 1.5rem;
 }
 
 .rounded-full {
@@ -683,8 +683,8 @@ video {
 }
 
 @media (min-width: 768px) {
-  .md\:w-64 {
-    width: 16rem;
+  .md\:w-52 {
+    width: 13rem;
   }
 
   .md\:flex-row {
@@ -697,6 +697,10 @@ video {
 
   .md\:justify-start {
     justify-content: flex-start;
+  }
+
+  .md\:gap-12 {
+    gap: 3rem;
   }
 
   .md\:text-2xl {
