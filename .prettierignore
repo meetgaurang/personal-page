@@ -1,3 +1,2 @@
-# Ignore artifacts:
-dist
-node_modules
+# Ignore tailwind generated resources
+src/output.css
