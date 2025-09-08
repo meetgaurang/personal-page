@@ -15,6 +15,10 @@
 
     <title>Gaurang Patel | Full Stack Software Engineer</title>
     <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("year").textContent = new Date().getFullYear();
+        // Your code here
+      });
       // Remove rocket bounce animation after certain time
       setTimeout(() => {
         document.getElementById("rocket-icon").classList.remove("fa-bounce");
@@ -86,7 +90,9 @@
     </div>
     <!-- Footer -->
     <div class="flex justify-center items-center h-[8vh]">
-      <span class="text-gray-500 text-sm">&copy; Copyright 2024 Gaurang </span>
+      <span class="text-gray-500 text-sm"
+        >&copy; Copyright <span id="year"></span> Gaurang
+      </span>
     </div>
     <!-- Space stars related animation starts -->
     <div id="space">
