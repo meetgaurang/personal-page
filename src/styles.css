@@ -6,7 +6,8 @@
 }
 
 /* Stars in space animation starts */
-#space, .stars {
+#space,
+.stars {
   overflow: hidden;
   position: absolute;
   top: 0;
@@ -17,13 +18,13 @@
 }
 
 .stars {
-  background-image: 
-    radial-gradient(2px 2px at 20px 30px, #eee, rgba(0,0,0,0)),
-    radial-gradient(2px 2px at 40px 70px, #d3b261, rgba(0,0,0,0)),
-    radial-gradient(2px 2px at 50px 160px, #ddd, rgba(0,0,0,0)),
-    radial-gradient(2px 2px at 90px 40px, #fff, rgba(0,0,0,0)),
-    radial-gradient(2px 2px at 130px 80px, #d3b261, rgba(0,0,0,0)),
-    radial-gradient(2px 2px at 160px 120px, #ddd, rgba(0,0,0,0));
+  background-image:
+    radial-gradient(2px 2px at 20px 30px, #eee, rgba(0, 0, 0, 0)),
+    radial-gradient(2px 2px at 40px 70px, #d3b261, rgba(0, 0, 0, 0)),
+    radial-gradient(2px 2px at 50px 160px, #ddd, rgba(0, 0, 0, 0)),
+    radial-gradient(2px 2px at 90px 40px, #fff, rgba(0, 0, 0, 0)),
+    radial-gradient(2px 2px at 130px 80px, #d3b261, rgba(0, 0, 0, 0)),
+    radial-gradient(2px 2px at 160px 120px, #ddd, rgba(0, 0, 0, 0));
   background-repeat: repeat;
   background-size: 200px 200px;
   animation: zoom 8s infinite;
@@ -56,7 +57,7 @@
     opacity: 0.1;
     transform: scale(0.5);
     animation-timing-function: ease-in;
-  } 
+  }
   85% {
     opacity: 1;
     transform: scale(1.8);
@@ -68,3 +69,77 @@
   }
 }
 /* Stars in space animation ends */
+
+/* Ask Cuckoo button starts */
+@property --cuckoo-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.ask-cuckoo {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+  padding: 0.55rem 1.4rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  color: #d3b261; /* matches golden-50 icons */
+  text-decoration: none;
+  overflow: hidden;
+  border: 2px solid transparent;
+  /* padding-box = dark fill (body bg), border-box = rotating golden glow */
+  background:
+    linear-gradient(#2c3333, #2c3333) padding-box,
+    conic-gradient(
+        from var(--cuckoo-angle),
+        #6b5a2e,
+        #d3b261,
+        #ffffff,
+        #d3b261,
+        #6b5a2e
+      )
+      border-box;
+  box-shadow: 0 0 12px rgba(211, 178, 97, 0.25);
+  animation: cuckoo-spin 3s linear infinite;
+  transition: 300ms;
+}
+
+/* sweeping "AI" shine across the surface */
+.ask-cuckoo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    110deg,
+    transparent 35%,
+    rgba(211, 178, 97, 0.28) 50%,
+    transparent 65%
+  );
+  background-size: 250% 100%;
+  animation: cuckoo-sweep 3s linear infinite;
+  pointer-events: none;
+}
+
+.ask-cuckoo:hover {
+  color: #ffffff;
+  box-shadow: 0 0 18px rgba(211, 178, 97, 0.5);
+}
+
+@keyframes cuckoo-spin {
+  to {
+    --cuckoo-angle: 360deg;
+  }
+}
+
+@keyframes cuckoo-sweep {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -50% 0;
+  }
+}
+/* Ask Cuckoo button ends */
