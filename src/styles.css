@@ -107,22 +107,6 @@
   transition: 300ms;
 }
 
-/* sweeping "AI" shine across the surface */
-.ask-cuckoo::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    110deg,
-    transparent 35%,
-    rgba(211, 178, 97, 0.28) 50%,
-    transparent 65%
-  );
-  background-size: 250% 100%;
-  animation: cuckoo-sweep 3s linear infinite;
-  pointer-events: none;
-}
-
 .ask-cuckoo:hover {
   color: #ffffff;
   box-shadow: 0 0 18px rgba(211, 178, 97, 0.5);
@@ -131,15 +115,6 @@
 @keyframes cuckoo-spin {
   to {
     --cuckoo-angle: 360deg;
-  }
-}
-
-@keyframes cuckoo-sweep {
-  0% {
-    background-position: 200% 0;
-  }
-  100% {
-    background-position: -50% 0;
   }
 }
 /* Ask Cuckoo button ends */
